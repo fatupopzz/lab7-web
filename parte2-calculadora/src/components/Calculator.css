@@ -1,0 +1,108 @@
+/* Carcasa principal con un glass suave */
+.calc-shell {
+  width: 320px;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 16px;
+  padding: 14px;
+  box-shadow: 0 6px 20px rgba(80, 130, 180, 0.15);
+}
+
+/* Barra de titulo simple con tres dots */
+.calc-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  margin-bottom: 12px;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+.dot-1 { background: #ff9aa2; }
+.dot-2 { background: #ffd6a5; }
+.dot-3 { background: #b5ead7; }
+
+.calc-title {
+  margin-left: auto;
+  font-size: 0.75rem;
+  color: #1a3a5c;
+  opacity: 0.6;
+}
+
+/* Pantalla */
+.calc-display {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  min-height: 64px;
+  text-align: right;
+}
+
+.calc-history {
+  font-size: 0.8rem;
+  color: #6b8aab;
+  height: 16px;
+}
+
+.calc-screen {
+  font-size: 1.8rem;
+  color: #1a3a5c;
+  word-break: break-all;
+}
+
+/* Grid de botones */
+.calc-keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 7px;
+}
+
+/* Botones base */
+.btn {
+  height: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: inherit;
+  transition: transform 0.05s;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+/* Numeros: blanco translucido */
+.btn-num {
+  background: rgba(255, 255, 255, 0.75);
+  color: #1a3a5c;
+}
+
+/* Funciones (AC, +/-, DEL): rosa pastel */
+.btn-fn {
+  background: rgba(255, 210, 220, 0.8);
+  color: #8a3a5c;
+  font-size: 0.85rem;
+}
+
+/* Operadores: azul pastel */
+.btn-op {
+  background: rgba(170, 210, 250, 0.85);
+  color: #1a3a5c;
+  font-size: 1.2rem;
+}
+
+/* Igual: verde menta */
+.btn-eq {
+  background: rgba(170, 230, 190, 0.9);
+  color: #1a4a2c;
+  font-size: 1.2rem;
+}
