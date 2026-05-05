@@ -1,29 +1,38 @@
-# Laboratorio 7 - Sistemas y Tecnologias Web
+## How to run
 
-**Carnet:** 24044
-**Nombre:** Fatima Navarro
-**Curso:** Sistemas y Tecnologias Web
-**Docente:** Marlon Fuentes
-**Semestre:** 1, 2026
+### Part 1 - Express server
 
----
+```bash
+cd parte1-express
+npm install
+npm start
+```
 
-## Descripcion
+Open `http://localhost:3000`. Available routes:
+- `GET /` - server alive check
+- `GET /info` - course info (JSON)
+- `GET /saludo` - welcome message
+- `GET /api/status` - server status (JSON)
+- `GET /api/student` - student data read from `datos.json`
 
-Laboratorio dividido en dos partes:
+### Part 2 - React calculator
 
-1. **Parte 1:** Migracion del servidor del Lab 6 de `http` nativo a Express.
-2. **Parte 2:** Calculadora hecha con React + Vite siguiendo el tutorial de Sagnick Gosh, con interfaz personalizada.
+```bash
+cd parte2-calculadora
+npm install
+npm run dev
+```
 
-## Estructura
+Open the link Vite shows in the terminal (usually `http://localhost:5173`).
 
-\`\`\`
-lab7/
-├── parte1-express/    → servidor migrado a Express
-└── parte2-calculadora/ → calculadora React + Vite
-\`\`\`
+## Calculator changes from the original tutorial
 
-## Videos
+- Full Custom design (dark blue to cyan gradient, soft glass effect on the calculator shell).
+- Buttons grouped by function with pastel colors: pink for utility (AC, +/-, DEL), blue for operators, mint green for equals, translucent white for numbers.
+- History line on the display showing the previous operand and pending operator.
+- Improved logic: handles division by zero as "Error", prevents multiple decimal points, supports DEL (delete last digit) and +/- (sign toggle).
+- Window-style header with three colored dots.
 
-- Parte 1: [pendiente]
-- Parte 2: [pendiente]
+## Demo video
+
+Both parts demoed in a single video: https://youtu.be/GVgrmqduRhI
